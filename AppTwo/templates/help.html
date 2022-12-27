@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ msg.title }} {% endblock %}
+
+{% block content %}
+<p> {{ msg.content }} </p>
+
+<h3>Liste des entreprises soumissionnaires</h3>
+<table>
+    <thead>
+        <th>N°</th>
+        <th>Nom de l'entreprise</th>
+        <th>Localisation</th>
+        <th>Directeur</th>
+    </thead>
+    {% for ent in entreprises %}
+    <tr>
+        <td> {{ent.id}} </td>
+        <td> {{ent.name}} </td>
+        <td> {{ent.localisation}} </td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>Liste des Employés</h3>
+<table>
+    <thead>
+        <th>N°</th>
+        <th>Nom complet</th>
+        <th>Poste</th>
+        <th>Entreprise</th>
+    </thead>
+    {% if employes  %}
+
+    {% for emp in employes %}
+    <tr>
+        <td> {{emp.id}} </td>
+        <td> {{emp.name}} </td>
+        <td> {{emp.fonction}} </td>
+        <td> {{emp.entreprise.name}} </td>
+    </tr>
+    {% endfor %}
+    {% else %}
+    <tr>
+        <td colspan="4">Aucun employé enregistré</td>
+    </tr>
+    {% endif %}
+
+</table>
+
+
+{% endblock %}

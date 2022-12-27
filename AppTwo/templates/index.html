@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title%} 2S kollect | Login {% endblock %}
+
+{% block content %}
+<form action="app-two" method="post">
+    {% csrf_token %}
+    <!-- <p>
+        <label for="username">Login</label>
+        <input type="text" id="username" name="login" placeholder="Nom d'utilisateur ou email">
+    </p>
+    <p>
+        <label for="pwd">Mot de passe</label>
+        <input type="password" id="pwd" name="pwd" placeholder="">
+    </p> -->
+    {{loginForm.as_p}}
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <p>
+        <input type="submit" id="" value="Connexion">
+    </p>
+    <p>
+        {{ django|upper|lower|title}}
+    </p>
+    
+</form>
+{% endblock %}

@@ -1,0 +1,52 @@
+body {
+    margin: 40px;
+    padding: 0;
+    font-size: 20px;
+    color: #000333;
+}
+
+
+p > input[type='submit']{
+    color: rgb(223, 116, 16);
+    font-size: 15px;
+    font-style: italic;
+    margin: 40px;
+    border-radius: 10px;
+    border: none;
+    background: #a4a8d4;
+}
+
+form label {
+    margin-right: 15px; 
+
+}
+
+form input {
+    margin-left: 15px; 
+    width: 250px;
+    height: 35px;
+
+}
+form input[id='username'] {
+    margin-left: 85px;
+}
+
+form input[id='pwd'] {
+    margin-left: 32px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 3px;
+}
+form input[id='login'] {
+    margin-left: 90px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
